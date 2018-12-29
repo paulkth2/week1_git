@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
+//HIHI
 /**
  * A simple {@link Fragment} subclass.
  */
