@@ -22,6 +22,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         //else if (position==1){
         //    return new imageFragment();
         //}
+        if(position == 2) {
+            return new VideoFragment();
+        }
+
         else {
             DemoFragment demoFragment = new DemoFragment();
             position = position + 1;
