@@ -1,17 +1,25 @@
 package com.example.taehyungkim.viewpagertut;
 
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.provider.Browser;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.VideoView;
 import java.util.List;
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
     List<YouTubeVideos> youTubeVideosList;
+
+
 
     public VideoAdapter() {
 
@@ -33,6 +41,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     @Override
     public void onBindViewHolder(VideoViewHolder holder, int position) {
         holder.videoWeb.loadData(youTubeVideosList.get(position).getVideoUrl(), "text/html", "utf-8");
+        holder.titleWeb.setText(youTubeVideosList.get(position).getTitle());
     }
 
     @Override
@@ -42,17 +51,23 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     public class VideoViewHolder extends RecyclerView.ViewHolder{
 
+
         WebView videoWeb;
+        TextView titleWeb;
 
         public VideoViewHolder(View itemView) {
             super(itemView);
 
             videoWeb = (WebView) itemView.findViewById(R.id.videoWebView);
+            titleWeb = (TextView) itemView.findViewById(R.id.titleWebView);
 
             videoWeb.getSettings().setJavaScriptEnabled(true);
-            videoWeb.setWebChromeClient(new WebChromeClient() {
+            videoWeb.setWebChromeClient(new WebChromeClient());
 
-            });
+            }
         }
-    }
+
+
+
+
 }
