@@ -1,0 +1,64 @@
+package com.example.taehyungkim.viewpagertut;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.widget.TextView;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class ProfileActivity extends AppCompatActivity {
+    Intent intent;
+
+    CircleImageView profile;
+    TextView name;
+    TextView job;
+    TextView country;
+    TextView mobile;
+    TextView email;
+    TextView gender;
+    TextView bloodgroup;
+    TextView education;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.profile_show);
+
+        intent = getIntent();
+
+        profile = (CircleImageView) findViewById(R.id.profile);
+        name = (TextView) findViewById(R.id.name);
+        country = (TextView) findViewById(R.id.location);
+        job = (TextView) findViewById(R.id.designation);
+        mobile = (TextView) findViewById(R.id.blood_group);
+        email = (TextView) findViewById(R.id.education);
+        gender = (TextView) findViewById(R.id.occupation);
+        bloodgroup = (TextView) findViewById(R.id.mobileNumber);
+        education = (TextView) findViewById(R.id.gender);
+
+        name.setText(intent.getStringExtra("name"));
+        country.setText(intent.getStringExtra("country"));
+        job.setText(intent.getStringExtra("job"));
+        mobile.setText(intent.getStringExtra("phone number"));
+        email.setText(intent.getStringExtra("email"));
+        gender.setText(intent.getStringExtra("gender"));
+        bloodgroup.setText(intent.getStringExtra("blood group"));
+        education.setText(intent.getStringExtra("education"));
+
+
+
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if ((keyCode == KeyEvent.KEYCODE_BACK))
+        {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+}
