@@ -1,5 +1,6 @@
 package com.example.taehyungkim.viewpagertut;
 
+
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;

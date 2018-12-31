@@ -1,13 +1,5 @@
 package com.example.taehyungkim.viewpagertut;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
@@ -39,18 +31,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-
-public class imageFragment extends FragmentActivity {
+public class ImageActivity extends AppCompatActivity {
 
     static final int REQUEST_PERMISSION_KEY = 1;
     LoadAlbum loadAlbumTask;
     GridView galleryGridView;
     ArrayList<HashMap<String, String>> albumList = new ArrayList<HashMap<String, String>>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_image);
 
         galleryGridView = (GridView) findViewById(R.id.galleryGridView);
 
@@ -118,12 +108,12 @@ public class imageFragment extends FragmentActivity {
         @Override
         protected void onPostExecute(String xml) {
 
-            AlbumAdapter adapter = new AlbumAdapter(imageFragment.this, albumList);
+            AlbumAdapter adapter = new AlbumAdapter(ImageActivity.this, albumList);
             galleryGridView.setAdapter(adapter);
             galleryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         final int position, long id) {
-                    Intent intent = new Intent(imageFragment.this, AlbumActivity.class);
+                    Intent intent = new Intent(ImageActivity.this, AlbumActivity.class);
                     intent.putExtra("name", albumList.get(+position).get(Function.KEY_ALBUM));
                     startActivity(intent);
                 }
@@ -145,7 +135,7 @@ public class imageFragment extends FragmentActivity {
                     loadAlbumTask.execute();
                 } else
                 {
-                    Toast.makeText(imageFragment.this, "You must accept permissions.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ImageActivity.this, "You must accept permissions.", Toast.LENGTH_LONG).show();
                 }
             }
         }

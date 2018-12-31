@@ -19,9 +19,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         if (position == 0){
             return new listFragment();
         }
-        //else if (position==1){
-        //    return new imageFragment();
-        //}
+        else if (position==1){
+            return new CameraFragment();
+        }
         if(position == 2) {
             return new VideoFragment();
         }

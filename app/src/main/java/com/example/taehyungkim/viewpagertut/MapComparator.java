@@ -1,9 +1,5 @@
 package com.example.taehyungkim.viewpagertut;
 
-/**
- * Created by SHAJIB on 7/16/2017.
- */
-
 import java.util.Comparator;
 import java.util.HashMap;
 
