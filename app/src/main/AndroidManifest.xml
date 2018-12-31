@@ -32,6 +32,10 @@
             android:name=".GalleryPreview"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".ImageActivity" />
+        <activity android:name=".VideoActivity1" />
+        <activity android:name=".VideoActivity2" />
+        <activity android:name=".VideoActivity3" />
+        <activity android:name=".VideoActivity4" />
     </application>
 
 </manifest>

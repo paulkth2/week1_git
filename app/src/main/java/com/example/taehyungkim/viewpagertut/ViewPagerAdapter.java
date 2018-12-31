@@ -23,7 +23,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             return new CameraFragment();
         }
         if(position == 2) {
-            return new VideoFragment();
+            return new Fragment3();
         }
 
         else {
