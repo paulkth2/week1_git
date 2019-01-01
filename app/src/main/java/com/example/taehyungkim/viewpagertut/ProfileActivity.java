@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         intent = getIntent();
 
-        profile = (CircleImageView) findViewById(R.id.profile);
+        profile = (CircleImageView) findViewById(R.id.profile_show);
         name = (TextView) findViewById(R.id.name);
         country = (TextView) findViewById(R.id.location);
         job = (TextView) findViewById(R.id.designation);
