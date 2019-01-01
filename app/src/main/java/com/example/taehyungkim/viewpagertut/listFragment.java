@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class listFragment extends Fragment {
     ListView listView;
     MyListAdapter myListAdapter;
     ArrayList<list_item> list_itemArrayList;
+    ImageButton inputButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class listFragment extends Fragment {
         View view = inflater.inflate(R.layout.list_fragment,null);
 
         listView = (ListView)view.findViewById(R.id.my_listview);
+        inputButton = (ImageButton)view.findViewById(R.id.inputButton);
 
         list_itemArrayList = new ArrayList<list_item>();
 
@@ -58,9 +61,10 @@ public class listFragment extends Fragment {
                 String gender = jObject.getString("gender");
                 String bloodgroup = jObject.getString("blood group");
                 String education = jObject.getString("education");
+                String birthdate = jObject.getString("birth date");
 
                 list_itemArrayList.add(
-                        new list_item(R.mipmap.ic_launcher, name, phonenum, email, job, country, gender, bloodgroup, education));
+                        new list_item(R.mipmap.ic_launcher, name, phonenum, email, job, country, gender, bloodgroup, education, birthdate));
             }
         } catch (JSONException e){
             //testView.setText("parsing error");
@@ -83,9 +87,18 @@ public class listFragment extends Fragment {
                 myIntent.putExtra("gender", list_itemArrayList.get(position).getGender());
                 myIntent.putExtra("blood group", list_itemArrayList.get(position).getBloodgroup());
                 myIntent.putExtra("education", list_itemArrayList.get(position).getEducaion());
+                myIntent.putExtra("birth date", list_itemArrayList.get(position).getBirthdate());
                 startActivity(myIntent);
             }
         });
+
+
+        inputButton.setOnClickListener(new ImageButton.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }) ;
 
         return view;
     }

@@ -20,6 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
     TextView gender;
     TextView bloodgroup;
     TextView education;
+    TextView birthdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
         gender = (TextView) findViewById(R.id.occupation);
         bloodgroup = (TextView) findViewById(R.id.mobileNumber);
         education = (TextView) findViewById(R.id.gender);
+        birthdate = (TextView) findViewById(R.id.birthdate);
 
         name.setText(intent.getStringExtra("name"));
         country.setText(intent.getStringExtra("country"));
@@ -46,8 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
         gender.setText(intent.getStringExtra("gender"));
         bloodgroup.setText(intent.getStringExtra("blood group"));
         education.setText(intent.getStringExtra("education"));
-
-
+        birthdate.setText(intent.getStringExtra("birth date"));
 
     }
 

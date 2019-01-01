@@ -11,6 +11,15 @@ public class list_item {
     private String gender;
     private String bloodgroup;
     private String educaion;
+    private String birthdate;
+
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
+    }
 
     public String getJob() {
         return job;
@@ -84,7 +93,7 @@ public class list_item {
         this.email = email;
     }
 
-    public list_item(int profile_image, String name, String phonenum, String email, String job, String country, String gender, String bloodgroup, String educaion) {
+    public list_item(int profile_image, String name, String phonenum, String email, String job, String country, String gender, String bloodgroup, String educaion, String birthdate) {
         this.profile_image = profile_image;
         this.name = name;
         this.phonenum = phonenum;
@@ -94,5 +103,7 @@ public class list_item {
         this.gender = gender;
         this.bloodgroup = bloodgroup;
         this.educaion = educaion;
+        this.birthdate = birthdate;
     }
+
 }
