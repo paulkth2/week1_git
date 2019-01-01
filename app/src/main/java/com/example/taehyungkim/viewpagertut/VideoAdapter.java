@@ -1,12 +1,19 @@
 package com.example.taehyungkim.viewpagertut;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.provider.Browser;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -49,11 +56,12 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         return youTubeVideosList.size();
     }
 
-    public class VideoViewHolder extends RecyclerView.ViewHolder{
+    public class VideoViewHolder extends RecyclerView.ViewHolder {
 
 
         WebView videoWeb;
         TextView titleWeb;
+
 
         public VideoViewHolder(View itemView) {
             super(itemView);
@@ -63,11 +71,6 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
             videoWeb.getSettings().setJavaScriptEnabled(true);
             videoWeb.setWebChromeClient(new WebChromeClient());
-
-            }
         }
-
-
-
-
+    }
 }

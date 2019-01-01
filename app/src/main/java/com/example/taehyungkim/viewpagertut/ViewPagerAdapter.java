@@ -46,9 +46,19 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        position = position+1;
+        if (position == 0){
+            return "CONTACT";
+        }
+        else if (position==1){
+            return "GALLERY";
+        }
+        if(position == 2) {
+            return "MUSIC";
+        }
 
-        return "Fragment "+position;
+        else{
+            return "Fragment";
+        }
     }
 }
 
