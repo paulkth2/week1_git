@@ -96,7 +96,8 @@ public class listFragment extends Fragment {
         inputButton.setOnClickListener(new ImageButton.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent myIntent = new Intent(getActivity(), ProfileActivity.class);
+                startActivity(myIntent);
             }
         }) ;
 
