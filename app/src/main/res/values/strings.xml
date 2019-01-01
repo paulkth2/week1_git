@@ -6,59 +6,53 @@
     <string name="json_data">[
  {
         \"image\": \"TaehyungKim.jpg\",
-        \"name\": \"Taehyung Kim\",
-        \"job\": \"Undergraduate Student\",
-        \"country\": \"South Korea\",
+        \"name\": \"Freddie Mercury\",
+        \"job\": \"Vocal and Piano\",
+        \"birth date\": \"1946.9.5\",
+        \"country\": \"Zanzibar\",
         \"phone number\": \"010-1234-5432\",
-        \"email\": \"paulkth2@naver.com\",
+        \"email\": \"mercuryF@gmail.com\",
         \"gender\": \"Male\",
-        \"blood group\": \"A\",
-        \"education\": \"KAIST\"
+        \"blood group\": \"B\",
+        \"education\": \"Ealing College\"
  },
  {
-   \"name\": \"Maya D. Reeves\",
-   \"phone number\": \"077-379-6539\",
-   \"email\": \"sem.semper.erat@et.net\",
-    \"country\": \"\",
-    \"job\": \"\",
-    \"image\": \"\",
-    \"gender\": \"\",
-    \"blood group\": \"\",
-    \"education\": \"\"
+        \"image\": \"TaehyungKim.jpg\",
+        \"name\": \"Roger Meddows Taylor\",
+        \"job\": \"Drum\",
+        \"birth date\": \"1949.7.26\",
+        \"country\": \"England\",
+        \"phone number\": \"010-5021-5432\",
+        \"email\": \"TaylorM@gmail.com\",
+        \"gender\": \"Male\",
+        \"blood group\": \"O\",
+        \"education\": \"London Hospital Medical College\"
  },
  {
-   \"name\": \"Vincent P. Hansen\",
-   \"phone number\": \"034-444-1529\",
-   \"email\": \"aptent@Utnecurna.com\",
-    \"country\": \"\",
-    \"job\": \"\",
-    \"image\": \"\",
-    \"gender\": \"\",
-    \"blood group\": \"\",
-    \"education\": \"\"
+        \"image\": \"TaehyungKim.jpg\",
+        \"name\": \"Brian Harold May\",
+        \"job\": \"Guitar\",
+        \"birth date\": \"1947.7.19\",
+        \"country\": \"England\",
+        \"phone number\": \"010-8092-5022\",
+        \"email\": \"MayB@gmail.com\",
+        \"gender\": \"Male\",
+        \"blood group\": \"B\",
+        \"education\": \"Imperial College London\"
  },
  {
-   \"name\": \"Julian H. Strickland\",
-   \"phone number\": \"032-903-7513\",
-   \"email\": \"dis@nibh.co.uk\",
-    \"country\": \"\",
-    \"job\": \"\",
-    \"image\": \"\",
-    \"gender\": \"\",
-    \"blood group\": \"\",
-    \"education\": \"\"
- },
- {
-   \"name\": \"Mufutau P. Madden\",
-   \"phone number\": \"011-323-0722\",
-   \"email\": \"rutrum.Fusce@adipiscingfringillaporttitor.org\",
-    \"country\": \"\",
-    \"job\": \"\",
-    \"image\": \"\",
-    \"gender\": \"\",
-    \"blood group\": \"\",
-    \"education\": \"\"
+        \"image\": \"TaehyungKim.jpg\",
+        \"name\": \"John Richard Deacon\",
+        \"job\": \"Base\",
+        \"birth date\": \"1951.8.19\",
+        \"country\": \"England\",
+        \"phone number\": \"010-5513-0931\",
+        \"email\": \"DeaconJ@gmail.com\",
+        \"gender\": \"Male\",
+        \"blood group\": \"O\",
+        \"education\": \"Chelsea College\"
  }
+
 ]
     </string>
 

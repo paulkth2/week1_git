@@ -2,6 +2,7 @@ package com.example.taehyungkim.viewpagertut;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.widget.TextView;
@@ -12,43 +13,36 @@ public class AddActivity extends AppCompatActivity {
     Intent intent;
 
     CircleImageView profile;
-    TextView name;
-    TextView job;
-    TextView country;
-    TextView mobile;
-    TextView email;
-    TextView gender;
-    TextView bloodgroup;
-    TextView education;
-    TextView birthdate;
+    TextInputLayout name;
+    TextInputLayout job;
+    TextInputLayout country;
+    TextInputLayout mobile;
+    TextInputLayout email;
+    TextInputLayout gender;
+    TextInputLayout birthdate;
+    TextInputLayout bloodgroup;
+    TextInputLayout education;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_show);
+        setContentView(R.layout.profile_edit);
 
         intent = getIntent();
 
         profile = (CircleImageView) findViewById(R.id.profile_show);
-        name = (TextView) findViewById(R.id.name);
-        country = (TextView) findViewById(R.id.location);
-        job = (TextView) findViewById(R.id.designation);
-        mobile = (TextView) findViewById(R.id.blood_group);
-        email = (TextView) findViewById(R.id.education);
-        gender = (TextView) findViewById(R.id.occupation);
-        bloodgroup = (TextView) findViewById(R.id.mobileNumber);
-        education = (TextView) findViewById(R.id.gender);
-        birthdate = (TextView) findViewById(R.id.birthdate);
+        name = (TextInputLayout) findViewById(R.id.name_input);
+        job = (TextInputLayout) findViewById(R.id.job_input);
+        country = (TextInputLayout) findViewById(R.id.country_input);
+        mobile = (TextInputLayout) findViewById(R.id.mobile_input);
+        email = (TextInputLayout) findViewById(R.id.email_input);
+        gender = (TextInputLayout) findViewById(R.id.gender_input);
+        birthdate = (TextInputLayout) findViewById(R.id.birthdate_input);
+        bloodgroup = (TextInputLayout) findViewById(R.id.bloodgroup_input);
+        education = (TextInputLayout) findViewById(R.id.education_input);
 
-        name.setText(intent.getStringExtra("name"));
-        country.setText(intent.getStringExtra("country"));
-        job.setText(intent.getStringExtra("job"));
-        mobile.setText(intent.getStringExtra("phone number"));
-        email.setText(intent.getStringExtra("email"));
-        gender.setText(intent.getStringExtra("gender"));
-        bloodgroup.setText(intent.getStringExtra("blood group"));
-        education.setText(intent.getStringExtra("education"));
-        birthdate.setText(intent.getStringExtra("birth date"));
+
 
     }
 
