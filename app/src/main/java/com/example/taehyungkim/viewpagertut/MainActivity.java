@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -27,12 +28,19 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
 
     private TabLayout tabLayout;
+
+    private File myJSON;
+
 
     /*
     public static final int MY_PERMISSIONS_REQUEST_CAMERA = 100;
@@ -57,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
 
         tabLayout.setupWithViewPager(viewPager);
+
+        String json_data = getString(R.string.json_data);
+
+
+        myJSON = new File(MainActivity.this.getFilesDir().getPath() + "/"+"myBlog.json");
+        if (!myJSON.exists()){
+            MyJSON.saveData(MainActivity.this, json_data);}
+
 
     /*
         if (ContextCompat.checkSelfPermission(this,
@@ -84,6 +100,17 @@ public class MainActivity extends AppCompatActivity {
         }
         */
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        requestCode &= 0xffff;
+        for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+            if (fragment != null) {
+                fragment.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     /*

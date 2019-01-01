@@ -1,9 +1,11 @@
 package com.example.taehyungkim.viewpagertut;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,8 +45,9 @@ public class listFragment extends Fragment {
 
         //testView = (TextView)findViewById(R.id.testView);
 
-        String json_data = getString(R.string.json_data);
+        //String json_data = getString(R.string.json_data);
 
+        String json_data = MyJSON.getData(getActivity().getApplicationContext());
         //testView.setText(json_data);
 
         try {
@@ -97,10 +100,11 @@ public class listFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(getActivity(), AddActivity.class);
-                startActivity(myIntent);
+                startActivityForResult(myIntent, 10001);
             }
         }) ;
 
         return view;
     }
+
 }
