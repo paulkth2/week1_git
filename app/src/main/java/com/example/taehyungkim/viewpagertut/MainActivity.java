@@ -69,9 +69,8 @@ public class MainActivity extends AppCompatActivity {
         String json_data = getString(R.string.json_data);
 
 
-        myJSON = new File(MainActivity.this.getFilesDir().getPath() + "/"+"myBlog.json");
-        if (!myJSON.exists()){
-            MyJSON.saveData(MainActivity.this, json_data);}
+        myJSON = new File(MainActivity.this.getFilesDir().getPath() + "/" + "myBlog.json");
+        MyJSON.saveData(MainActivity.this, json_data);
 
 
     /*

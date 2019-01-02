@@ -5,7 +5,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="json_data">[
  {
-        \"image\": \"TaehyungKim.jpg\",
+        \"image\": \"freddie_mercury\",
         \"name\": \"Freddie Mercury\",
         \"job\": \"Vocal and Piano\",
         \"birth date\": \"1946.9.5\",
@@ -17,7 +17,7 @@
         \"education\": \"Ealing College\"
  },
  {
-        \"image\": \"TaehyungKim.jpg\",
+        \"image\": \"roger_taylor\",
         \"name\": \"Roger Meddows Taylor\",
         \"job\": \"Drum\",
         \"birth date\": \"1949.7.26\",
@@ -29,7 +29,7 @@
         \"education\": \"London Hospital Medical College\"
  },
  {
-        \"image\": \"TaehyungKim.jpg\",
+        \"image\": \"brian_may\",
         \"name\": \"Brian Harold May\",
         \"job\": \"Guitar\",
         \"birth date\": \"1947.7.19\",
@@ -41,7 +41,7 @@
         \"education\": \"Imperial College London\"
  },
  {
-        \"image\": \"TaehyungKim.jpg\",
+        \"image\": \"john_deacon\",
         \"name\": \"John Richard Deacon\",
         \"job\": \"Base\",
         \"birth date\": \"1951.8.19\",

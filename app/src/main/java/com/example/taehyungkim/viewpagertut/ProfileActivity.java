@@ -40,6 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
         education = (TextView) findViewById(R.id.gender);
         birthdate = (TextView) findViewById(R.id.birthdate);
 
+        profile.setImageResource(intent.getIntExtra("image", 0));
         name.setText(intent.getStringExtra("name"));
         country.setText(intent.getStringExtra("country"));
         job.setText(intent.getStringExtra("job"));

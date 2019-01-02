@@ -79,7 +79,7 @@ public class AddActivity extends AppCompatActivity {
 
                     //testView.setText("Array loading succeed.");
 
-                    new_contact.put("image", "");
+                    new_contact.put("image", R.mipmap.ic_launcher);
                     new_contact.put("name", name_string);
                     new_contact.put("job", job_string);
                     new_contact.put("country", country_string);
@@ -101,7 +101,7 @@ public class AddActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                setResult(AddActivity.RESULT_OK);
+                //setResult(AddActivity.RESULT_OK);
                 finish();
             }
         }) ;
